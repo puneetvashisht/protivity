@@ -6,4 +6,6 @@
          
         1. Why react - (performance, features)
         2. Component - reusable part
-            function that return html
+            a. function that return html
+            b. class syntax
+        3. Props - Get as inputs : State - belongs to the component
