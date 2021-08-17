@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Clock</title>
+    <body>
+        <h2 id="currenttime"></h2>
+    </body>
+
+    <script>
+
+        setInterval(()=>{
+            var now = new Date();
+            var str = 'Time right now - ' + now.getHours() + ' : ' + now.getMinutes() + ' : ' + now.getSeconds()
+            document.getElementById("currenttime").innerText = str;
+
+        }, 1000)
+        
+
+    </script>
+
+</head>
+</html>
