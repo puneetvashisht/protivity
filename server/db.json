@@ -1,0 +1,14 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Angular",
+      "summary": "Framework from google!!"
+    },
+    {
+      "title": "Postman",
+      "summary": "Backed API Testing tool",
+      "id": 3
+    }
+  ]
+}
