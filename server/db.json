@@ -1,14 +1,49 @@
 {
   "courses": [
     {
-      "id": 1,
-      "title": "Angular",
-      "summary": "Framework from google!!"
-    },
-    {
       "title": "Postman",
       "summary": "Backed API Testing tool",
       "id": 3
+    },
+    {
+      "title": "UI",
+      "summary": "Basic UI course",
+      "id": 7
+    },
+    {
+      "title": "React",
+      "summary": "from react app",
+      "id": 8
+    },
+    {
+      "title": "React",
+      "summary": "sdkjlklsgdgs",
+      "id": 9
+    },
+    {
+      "title": "Angular",
+      "summary": "skjglksd gsd dg",
+      "id": 10
+    },
+    {
+      "title": "sgdgsd",
+      "summary": "sgsdgdssgdsg",
+      "id": 11
+    },
+    {
+      "title": "React",
+      "summary": "Ui Lib",
+      "id": 12
+    },
+    {
+      "title": "sdgsdgs",
+      "summary": "sdgdsgsd",
+      "id": 13
+    },
+    {
+      "title": "Test",
+      "summary": "test message",
+      "id": 14
     }
   ]
 }
