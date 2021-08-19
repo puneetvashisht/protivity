@@ -17,4 +17,10 @@
             1. Third party : react-router-dom
         7. Workout {id:1, title:'Backstroke for 10 minutes', cbpm: 50, category: 'Cardio'}
            User {id: 1, email:'user@test.com', password:'abc!xyz@'}
+        8. Class vs Functional Components
+            FunctionalComponents
+                a. Replace state initialization in constructor to useState hook
+                b. replace initialization of component to useEffect hook
+                c. No using (this) keyword. Explicitly available for class components only.
+
 

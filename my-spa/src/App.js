@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import AddCourse from "./components/AddCourse";
 import CourseList from "./components/CourseList";
+import NameForm from './components/NameForm'
 
 export default function App() {
   return (
@@ -22,7 +23,7 @@ export default function App() {
               <Link to="/add">Add Courses</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/nameform">Uncontrolled component</Link>
             </li>
             <li>
               <Link to="/users">Users</Link>
@@ -33,8 +34,8 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/nameform">
+            <NameForm />
           </Route>
           <Route path="/users">
             <Users />
