@@ -1,8 +1,8 @@
 {
   "courses": [
     {
-      "title": "Postman",
-      "summary": "Backed API Testing tool",
+      "title": "Postman8.1",
+      "summary": "Backed API Testing tool change summary",
       "id": 3
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "title": "Test",
-      "summary": "test message",
+      "summary": "test message change",
       "id": 14
     },
     {
@@ -56,8 +56,8 @@
       "id": 16
     },
     {
-      "title": "Functinal",
-      "summary": "Test functinal compon",
+      "title": "Functional",
+      "summary": "Test functional component",
       "id": 17
     }
   ]

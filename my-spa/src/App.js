@@ -9,6 +9,7 @@ import {
 import AddCourse from "./components/AddCourse";
 import CourseList from "./components/CourseList";
 import NameForm from './components/NameForm'
+import UpdateCourse from "./components/UpdateCourse";
 
 export default function App() {
   return (
@@ -42,6 +43,9 @@ export default function App() {
           </Route>
           <Route path="/add">
             <AddCourse />
+          </Route>
+          <Route path="/update/:id">
+            <UpdateCourse />
           </Route>
           <Route exact path="/">
             <CourseList />
