@@ -24,3 +24,51 @@
                 c. No using (this) keyword. Explicitly available for class components only.
 
 
+
+        Why ReactJS - 
+            1. Component based library (reusable components)
+            2. Performance (Virtual Dom)
+            3. Simple (just using JSX)
+            4. Http, SPA, Forms, Charts
+        JSX - JS Extension, TS, Dart, CoffeeScript  --> Browsers only understand JS
+        Functional & Class
+        Props vs States
+        Events - Custom events
+        Stateful vs Stateless
+        Lists - map, unique key to every item
+        Styling component - inline, component, global
+
+        Lifecycle of React
+            constructor (props) -> initialize state, use props
+            render() -> return template
+            componentDidMount() --> async 
+            shouldComponentUpdate()
+            componentDidUpdate()
+            render()
+            componentWillUnmount
+            componentMount
+        
+        Dynamic Content 
+        Forms:
+            Controlled: Two way mapping b/w state & form control  (Form validation)
+            Uncontrolled: Refs
+        Http: Fetch (native) or Axios (third party library)
+        Routing: react-router-dom
+            1. Declarative routing
+            2. Parameters
+            3. Nested Routes
+            4. Error Handling
+        Hooks:
+            useState & useEffect:
+            useParams
+
+        Application
+            1. Header & Footer
+            2. SPA
+            3. Login/Registration Page (programmtic route navigation)
+            4. CRUD
+            5. Operation other than CRUD 
+
+
+
+

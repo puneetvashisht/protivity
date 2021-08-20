@@ -5,10 +5,19 @@ const AddCourse = () => {
     const [title, setTitle] = useState('');
     const [summary, setSummary] = useState('');
     const [message, setMessage] = useState('');
+    const [titleMessage, setTitleMessage] = useState();
 
     const handleTitleChange = ($event) => {
         console.log($event.target.value);
+       
         setTitle($event.target.value)
+        if(title.length < 6){
+            setTitleMessage('Length is less than 6')
+            // return;
+        }
+        else{
+            setTitleMessage('')
+        }
     }
     const handleSummaryChange = ($event) => {
         console.log($event.target.value);
@@ -16,9 +25,7 @@ const AddCourse = () => {
     }
 
     const addCourse = () => {
-        if(title.length < 1){
-            return;
-        }
+      
         fetch('http://localhost:8000/courses', {
             method: "POST",
             body: JSON.stringify({title, summary}),
@@ -39,7 +46,8 @@ const AddCourse = () => {
                  <div className="alert alert-primary" role="alert">
                     {message}
                 </div>
-                <input type="text" onChange={handleTitleChange} placeholder="Enter title" value={title}></input>
+                <input type="text" onChange={handleTitleChange} placeholder="Enter title" value={title}></input> 
+                {titleMessage  && titleMessage}
                 <input type="text" onChange={handleSummaryChange} placeholder="Enter summary" value={summary}></input>
                 <button className="btn btn-primary" onClick={addCourse}>Add Course</button>
             </div>

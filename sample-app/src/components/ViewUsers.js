@@ -1,6 +1,10 @@
-const ViewUsers = () =>{
+import './ViewUsers.css';
 
-    return (<h2>View Users</h2>)
+const ViewUsers = () =>{
+    // const mystyle = {border: '2px solid green'} 
+   
+
+    return (<h2 className="greenbox">View Users</h2>)
 }
 
 export default ViewUsers;

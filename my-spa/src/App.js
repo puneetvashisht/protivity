@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import AddCourse from "./components/AddCourse";
 import CourseList from "./components/CourseList";
+import LoginForm from "./components/login-form";
 import NameForm from './components/NameForm'
 import UpdateCourse from "./components/UpdateCourse";
 
@@ -29,6 +30,9 @@ export default function App() {
             <li>
               <Link to="/users">Users</Link>
             </li>
+            <li>
+              <Link to="/login">login</Link>
+            </li>
           </ul>
         </nav>
 
@@ -49,6 +53,9 @@ export default function App() {
           </Route>
           <Route exact path="/">
             <CourseList />
+          </Route>
+          <Route path="/login">
+            <LoginForm></LoginForm>
           </Route>
           <Route path="*">
             <NoMatch />

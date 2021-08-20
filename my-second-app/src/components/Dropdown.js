@@ -22,6 +22,8 @@ export default class Dropdown extends Component {
         var cuisineList = this.state.cuisines.map((cuisine, i)=>{
             return <DropdownItem key={i} text={cuisine} whenItemClicked={this.handleItemClick.bind(this)}></DropdownItem>
         })
+        if(this.state.show)
+        let content = <h2>Show this only when show state is true</h2>
 
         return (
             <div className="dropdown">
@@ -31,6 +33,7 @@ export default class Dropdown extends Component {
             <ul className={this.state.show?'dropdown-menu show': 'dropdown-menu'} aria-labelledby="dropdownMenuButton1">
                 {cuisineList}
             </ul>
+            {content}
             </div>
         )
     }
