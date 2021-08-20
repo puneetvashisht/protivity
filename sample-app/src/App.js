@@ -8,6 +8,7 @@ import {
 import Header from "./components/Header";
 import ViewUsers from "./components/ViewUsers";
 import ViewWorkouts from "./components/ViewWorkouts";
+import WorkoutOperation from "./components/WorkoutOperation";
 
 export default function App() {
   return (
@@ -21,6 +22,9 @@ export default function App() {
           </Route>
           <Route path="/viewusers">
             <ViewUsers />
+          </Route>
+          <Route path="/operation/:id">
+            <WorkoutOperation />
           </Route>
       
         </Switch>

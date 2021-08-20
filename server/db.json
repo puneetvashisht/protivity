@@ -62,11 +62,33 @@
     }
   ],
   "workouts": [
-    {"id": 1, "title": "Cardio for 10 mins", "cbpm": 20},
-    {"id": 2, "title": "Swimming for 10 mins", "cbpm": 30}
+    {
+      "id": 1,
+      "title": "Cardio for 10 mins",
+      "cbpm": 20,
+      "userId": 1,
+      "startTime": "2021-08-20T05:12:10.076Z",
+      "endTime": "2021-08-20T05:10:56.631Z"
+    },
+    {
+      "id": 2,
+      "title": "Swimming for 10 mins",
+      "cbpm": 30,
+      "userId": 2
+    }
   ],
   "users": [
-    {"id": 1, "email": "user1@test.com", "password": "testtest", "workoutId": 1},
-    {"id": 2, "email": "user2@test.com", "password": "testtest", "workoutId": 2}
+    {
+      "id": 1,
+      "email": "user1@test.com",
+      "password": "testtest",
+      "workoutId": 1
+    },
+    {
+      "id": 2,
+      "email": "user2@test.com",
+      "password": "testtest",
+      "workoutId": 2
+    }
   ]
 }

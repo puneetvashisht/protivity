@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const ViewWorkouts = () =>{
 
@@ -35,9 +36,7 @@ const ViewWorkouts = () =>{
                                 <th scope="row">{i+1}</th>
                                 <td>{workout.title}</td>
                                 <td>{workout.cbpm}</td>
-                                <td><button type="button" className="btn btn-default" aria-label="Left Align">
-                                <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button></td>
+                                <td><Link to={'/operation/' + workout.id}>Start Workout</Link></td>
                               </tr>);
                             })
                         }
