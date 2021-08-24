@@ -7,7 +7,28 @@ public class Employee2 {
 	String name;
 	private double salary;
 	
+	Address address;
+
+
+	public Employee2() {
+		super();
+	}
 	
+	// generated constructor by using eclipse shortcut
+		public Employee2(int id, String name, double salary) {
+			super();
+			this.id = id;
+			this.name = name;
+			this.salary = salary;
+		}
+
+	public Employee2(int id, String name, double salary, Address address) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.address = address;
+	}
 
 	public double getSalary() {
 		return salary;
@@ -32,18 +53,9 @@ public class Employee2 {
 		
 	}
 
-	// generated constructor by using eclipse shortcut
-	public Employee2(int id, String name, double salary) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.salary = salary;
-	}
+	
 
 //	 generated toString by using eclipse shortcut
-	public String toString() {
-		return "Employee2 [id=" + id + ", name=" + name + ", salary=" + salary + "]";
-	}
 
 	public static void main(String[] args) {
 		
@@ -56,6 +68,11 @@ public class Employee2 {
 		
 		System.out.println(e2.toString());
 
+	}
+
+	@Override
+	public String toString() {
+		return "Employee2 [id=" + id + ", name=" + name + ", salary=" + salary + ", address=" + address + "]";
 	}
 
 }

@@ -1,6 +1,13 @@
 OO Principles
 	1. Encapsulation
 		Public(least restrictive), Protected, Default, Public
-	2. Inheritance
-	3. Polymorphism
+	2. Inheritance: is-a relationship
+	3. Polymorphism: Using same name for multiple purposes
+		a. Overloading: using same method name by differing arguments (type/number)
+		b. Overriding: different classes (parent/child) -- same method signature
 	4. Abstraction
+	
+	
+	Manager is a Employee
+	Plane is a Vehicle
+	 Not correct - Employee has an Address
