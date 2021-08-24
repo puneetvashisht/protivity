@@ -11,3 +11,6 @@ OO Principles
 	Manager is a Employee
 	Plane is a Vehicle
 	 Not correct - Employee has an Address
+	 
+	 
+	 Interface (everything abstract)   ---------   Abstract classes (some abstract, some defined) .. Concrete classes(all methods should be defined)
