@@ -25,6 +25,12 @@ public class RoadBicycle extends Bicycle {
 	public String toString() {
 		return "RoadBicycle [speed=" + speed + "]";
 	}
+
+	@Override
+	public void changeGear(int gear) {
+		System.out.println("Change gear not used in Road Bicycle");
+		
+	}
 	
 	
 	

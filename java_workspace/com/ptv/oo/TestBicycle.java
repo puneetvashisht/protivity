@@ -4,11 +4,11 @@ public class TestBicycle {
 	
 	
 	public static void main(String[] args) {
-		Bicycle b = new Bicycle(0);
-		b.speedUp();
-		System.out.println(b);
-		b.brakeDown();
-		System.out.println(b);
+//		Bicycle b = new Bicycle(0);
+//		b.speedUp();
+//		System.out.println(b);
+//		b.brakeDown();
+//		System.out.println(b);
 		
 		
 //		MountainBicycle mb = new MountainBicycle(0, 7);
@@ -35,7 +35,7 @@ public class TestBicycle {
 		rb.brakeDown();
 		System.out.println(rb);
 		
-		Bicycle bicycles[] = {b, mb,rb};
+		Bicycle bicycles[] = { mb,rb};
 		
 		for(Bicycle bicycle: bicycles) {
 //			System.out.println(bicycle);

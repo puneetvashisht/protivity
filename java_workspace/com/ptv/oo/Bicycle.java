@@ -1,6 +1,6 @@
 package com.ptv.oo;
 
-public class Bicycle {
+public abstract class Bicycle implements IBicycle{
 	
 	int speed;
 	
@@ -12,7 +12,7 @@ public class Bicycle {
 		this.speed = speed;
 	}
 
-	protected void speedUp() {
+	public void speedUp() {
 		++this.speed;
 	}
 
@@ -23,6 +23,7 @@ public class Bicycle {
 	public String toString() {
 		return "Bicycle [speed=" + speed + "]";
 	}
+
 	
 	
 	

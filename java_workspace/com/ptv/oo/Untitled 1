@@ -6,6 +6,7 @@ OO Principles
 		a. Overloading: using same method name by differing arguments (type/number)
 		b. Overriding: different classes (parent/child) -- same method signature
 	4. Abstraction
+		Abstract class & Interfaces
 	
 	
 	Manager is a Employee
@@ -14,3 +15,10 @@ OO Principles
 	 
 	 
 	 Interface (everything abstract)   ---------   Abstract classes (some abstract, some defined) .. Concrete classes(all methods should be defined)
+	 
+Collections
+List, Set, Maps
+
+Lamdas
+
+Spring
