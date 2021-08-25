@@ -3,6 +3,8 @@ package com.ptv;
 // import whatever is not available in the lang/default package
 import java.util.Date;
 
+
+
 //class
 public class Employee {
 	// fields
@@ -16,18 +18,30 @@ public class Employee {
 		this.salary += byAmount;
 	}
 	
+//	public String toString() {
+//		return "id: " + this.id + " name: " + this.name + " salary: " + this.salary;
+//	}
+	
+	@Override
 	public String toString() {
-		return "id: " + this.id + " name: " + this.name + " salary: " + this.salary;
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
 	}
 	
 	//constructor - initialize fields/state
-	Employee(int id, String name, double salary){
+	public Employee(int id, String name, double salary){
 		super();
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
 	}
+	@Override
+	 public boolean equals(Object obj) {
+		 Employee e = (Employee) obj;
+	        return (e.id == this.id);
+	 }
 	
+	
+
 	public static void main(String[] args) {
 		
 		// Create objects of Employee
