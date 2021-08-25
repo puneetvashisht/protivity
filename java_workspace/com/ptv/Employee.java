@@ -8,6 +8,13 @@ import java.util.Date;
 //class
 public class Employee implements Comparable<Employee>{
 	// fields
+	
+	static String companyName = "ABC Inc.";
+	
+	public static String getCompanyName() {
+		return companyName;
+	}
+	
 	int id;
 	String name;
 	public double salary;

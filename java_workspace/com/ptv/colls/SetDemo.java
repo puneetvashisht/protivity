@@ -15,9 +15,12 @@ public class SetDemo {
 //		fruits.add("pineapple");
 //		fruits.add("apple");
 //		System.out.println(fruits);
+		;
+		System.out.println(Employee.getCompanyName());
 		
 		
 		Employee e1 = new Employee(12, "Ravi", 33333.33);
+		e1.getCompanyName();
 		Employee e5 = new Employee(12, "Ravi", 33333.33);
 		Employee e2 = new Employee(23, "Priya", 3333.33);
 		Employee e3 = new Employee(2, "Rahul", 14343.34);
