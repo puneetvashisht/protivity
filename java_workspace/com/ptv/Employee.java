@@ -6,11 +6,11 @@ import java.util.Date;
 
 
 //class
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	// fields
 	int id;
 	String name;
-	double salary;
+	public double salary;
 	Date dateOfjoining;
 	
 	//methods
@@ -35,10 +35,28 @@ public class Employee {
 		this.salary = salary;
 	}
 	@Override
-	 public boolean equals(Object obj) {
-		 Employee e = (Employee) obj;
-	        return (e.id == this.id);
-	 }
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+	
+	
 	
 	
 
@@ -64,5 +82,10 @@ public class Employee {
 //				e2.name = "Priya";
 //				e2.salary = 44444.33;
 				System.out.println(e2.salary);
+	}
+
+	@Override
+	public int compareTo(Employee o) {
+		return this.id - o.id;
 	}
 }
