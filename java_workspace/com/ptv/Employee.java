@@ -16,7 +16,7 @@ public class Employee implements Comparable<Employee>{
 	}
 	
 	int id;
-	String name;
+	public String name;
 	public double salary;
 	Date dateOfjoining;
 	

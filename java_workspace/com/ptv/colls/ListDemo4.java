@@ -2,6 +2,7 @@ package com.ptv.colls;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.ptv.Employee;
@@ -34,7 +35,25 @@ public class ListDemo4 {
 		System.out.println("--- employees sorted any other field ----");
 		System.out.println(employees);
 		
-	
+		
+		// Anonymous class
+//		Collections.sort(employees,new Comparator<Employee>() {
+//			@Override
+//			public int compare(Employee o1, Employee o2) {
+//				return o1.name.compareTo(o2.name);
+//			}
+//		});
+//		
+//		System.out.println("--- employees sorted by name using anonymous class ----");
+//		System.out.println(employees);
+		
+		
+		// Using lamda
+		
+		Collections.sort(employees, (o1,o2)-> o1.name.compareTo(o2.name));
+		
+		System.out.println("--- employees sorted by name using lamdas ----");
+		System.out.println(employees);
 		
 //		Employee e = new Employee(12, "Ravi", 33333.33);
 //		
