@@ -20,6 +20,17 @@ public class Employee implements Comparable<Employee>{
 	public double salary;
 	Date dateOfjoining;
 	
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	//methods
 	public void incrementSalary(double byAmount) {
 		this.salary += byAmount;
