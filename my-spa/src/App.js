@@ -39,6 +39,9 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+        <Route exact path="/">
+            <CourseList />
+          </Route>
           <Route path="/nameform">
             <NameForm />
           </Route>
@@ -51,9 +54,7 @@ export default function App() {
           <Route path="/update/:id">
             <UpdateCourse />
           </Route>
-          <Route exact path="/">
-            <CourseList />
-          </Route>
+         
           <Route path="/login">
             <LoginForm></LoginForm>
           </Route>

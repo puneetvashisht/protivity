@@ -26,9 +26,9 @@ const AddCourse = () => {
 
     const addCourse = () => {
       
-        fetch('http://localhost:8000/courses', {
+        fetch('http://localhost:8080/courses/', {
             method: "POST",
-            body: JSON.stringify({title, summary}),
+            body: JSON.stringify({title, description:summary}),
             headers: {"Content-type": "application/json; charset=UTF-8"}
         })
         .then(res=>{

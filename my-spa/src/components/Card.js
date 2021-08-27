@@ -8,7 +8,7 @@ export default class Card extends Component {
 
     deleteCourse(){
         // http call to delete from server
-        fetch('http://localhost:8000/courses/' +this.props.id, {
+        fetch('http://localhost:8080/courses/' +this.props.id, {
             method: 'DELETE'
         })
         .then(res=>res.json())

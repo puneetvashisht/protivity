@@ -5,10 +5,11 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import LoginForm from './components/login-form';
 import Basic from './components/Basic';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Basic />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
