@@ -59,6 +59,16 @@
       "title": "Functional",
       "summary": "Test functional component",
       "id": 17
+    },
+    {
+      "title": "XYZ",
+      "summary": "REST API Testing",
+      "id": 18
+    },
+    {
+      "title": "XYZ",
+      "summary": "REST API Testing",
+      "id": 19
     }
   ],
   "workouts": [
