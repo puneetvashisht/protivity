@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import { Button } from 'react-bootstrap';
+import Toast from 'react-bootstrap/Toast'
+import ToastHeader from 'react-bootstrap/ToastHeader'
 
 const AddCourse = () => {
 
@@ -43,13 +46,21 @@ const AddCourse = () => {
 
     return (
         <div className="container">
-                 <div className="alert alert-primary" role="alert">
+            <Toast show={message} onClose={()=>setMessage(null)}>
+            <Toast.Header>
+                <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                <strong className="me-auto">Successfully Added</strong>
+                <small>Just Now</small>
+            </Toast.Header>
+            <Toast.Body>{title} course added!!</Toast.Body>
+            </Toast>
+                 {/* <div className="alert alert-primary" role="alert">
                     {message}
-                </div>
+                </div> */}
                 <input type="text" onChange={handleTitleChange} placeholder="Enter title" value={title}></input> 
                 {titleMessage  && titleMessage}
                 <input type="text" onChange={handleSummaryChange} placeholder="Enter summary" value={summary}></input>
-                <button className="btn btn-primary" onClick={addCourse}>Add Course</button>
+                <Button variant="secondary" onClick={addCourse}>Add Course</Button>
             </div>
     )
 }

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -70,6 +71,18 @@ public class CourseController {
 		ResponseEntity<Course> re = new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		if(foundCourse.isPresent()) {
 			re = new ResponseEntity<>(foundCourse.get(), HttpStatus.OK);
+		}
+		return re;
+	}
+	
+	@GetMapping("")
+	public ResponseEntity<List<Course>> findCourseByName(@RequestParam("title") String title) {
+		
+		System.out.println("Request PAram Value" +title );
+		ResponseEntity<List<Course>> re = new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		List<Course> foundCourses = courseRepository.findByTitle(title);
+		if(foundCourses !=null) {
+			re = new ResponseEntity<>(foundCourses, HttpStatus.OK);
 		}
 		return re;
 	}

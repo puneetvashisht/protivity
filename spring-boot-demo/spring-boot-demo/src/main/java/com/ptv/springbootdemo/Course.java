@@ -13,6 +13,7 @@ public class Course {
 	int id;
 	String title;
 	String description;
+	double price;
 	public Course(String title, String description) {
 		super();
 		this.title = title;
@@ -26,6 +27,14 @@ public class Course {
 	
 	
 	
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
 	public int getId() {
 		return id;
 	}
