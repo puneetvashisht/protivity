@@ -12,6 +12,8 @@ import CourseList from "./components/CourseList";
 import LoginForm from "./components/login-form";
 import NameForm from './components/NameForm'
 import UpdateCourse from "./components/UpdateCourse";
+import Register from "./components/Register";
+import Login from "./components/Login";
 
 export default function App() {
   return (
@@ -32,7 +34,10 @@ export default function App() {
               <Link to="/users">Users</Link>
             </li>
             <li>
-              <Link to="/login">login</Link>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/register">Register User</Link>
             </li>
           </ul>
         </nav>
@@ -56,8 +61,11 @@ export default function App() {
             <UpdateCourse />
           </Route>
          
-          <Route path="/login">
-            <LoginForm></LoginForm>
+          <Route path="/login" component={Login}>
+            
+          </Route>
+          <Route path="/register">
+            <Register></Register>
           </Route>
           <Route path="*">
             <NoMatch />

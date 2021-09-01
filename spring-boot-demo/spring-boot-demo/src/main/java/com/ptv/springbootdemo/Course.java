@@ -1,9 +1,11 @@
 package com.ptv.springbootdemo;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Course {
@@ -14,6 +16,20 @@ public class Course {
 	String title;
 	String description;
 	double price;
+	
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	User user;
+	
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	public Course(String title, String description) {
 		super();
 		this.title = title;
@@ -61,8 +77,11 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "Course [id=" + id + ", title=" + title + ", description=" + description + "]";
+		return "Course [id=" + id + ", title=" + title + ", description=" + description + ", price=" + price + ", user="
+				+ user + "]";
 	}
+
+	
 	
 	
 
