@@ -11,6 +11,27 @@ export default class Register extends React.Component {
         this.state = {message: ''}
     }
 
+
+    onSubmit = (fields) => {
+        alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4))
+        // post to server using fetch
+        fetch('http://localhost:8080/users/', {
+            method: "POST",
+            body: JSON.stringify(fields),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+        })
+        .then(res=>{
+            console.log(res);
+            console.log(res.status)
+            if(res.status === 201){
+                // setMessage('Course successfully added')
+                console.log('Works fine');
+                this.setState({message: "User Registered Successfully!!"})
+            }
+        })
+      
+    }
+
     render() {
         return (
             <Formik
@@ -30,31 +51,7 @@ export default class Register extends React.Component {
                         .oneOf([Yup.ref('password'), null], 'Passwords must match')
                         .required('Confirm Password is required')
                 })}
-                onSubmit={fields => {
-                    // alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4))
-                    // post to server using fetch
-                    fetch('http://localhost:8080/users/', {
-                        method: "POST",
-                        body: JSON.stringify(fields),
-                        headers: {"Content-type": "application/json; charset=UTF-8"}
-                    })
-                    .then(res=>{
-                        console.log(res);
-                        console.log(res.status)
-                        if(res.status === 201){
-                            // setMessage('Course successfully added')
-                            console.log('Works fine');
-                            this.setState({message: "User Registered Successfully!!"})
-                        }
-                        // return res.json()
-                    })
-                    // .then(data=>{
-                    //     console.log(data);
-                    //     if(data.auth){
-                    //         this.setState({message: data.message})
-                    //     }
-                    // })
-                }}
+                onSubmit={this.onSubmit.bind(this)}
                 render={({ errors, status, touched }) => (
                     <>
                     <Toast show={this.state.message} onClose={()=> this.setState({message: null})}>

@@ -46,6 +46,7 @@ public class UserController {
 			if(existingUser.getPassword().equals(user.getPassword())) {
 //				3. Return successfull response
 				Response response = new Response("User authenticated!!", true);
+				response.setUserId(existingUser.getId());
 				re = new ResponseEntity<>(response, HttpStatus.OK);
 				
 			}

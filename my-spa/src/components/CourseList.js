@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card';
-
+import {useAuth} from '../context/auth'
 const CourseList = () => {
 
+
+    const {userId, setUserId} = useAuth();
     // For state initialization use useState hook
     const [courses, setCourses] = useState([]);
     const [filteredCourses, setfilteredCourses] = useState([]);
@@ -39,7 +41,7 @@ const CourseList = () => {
     // For component mounting use.. useEffect hook
     useEffect(() => {
         console.log('Called up after component is mounted and running');
-        fetch('http://localhost:8080/courses/')
+        fetch('http://localhost:8080/courses/user/'+ userId)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

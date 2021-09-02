@@ -2,11 +2,18 @@ package com.ptv.springbootdemo.models;
 
 public class Response {
 	
+	int userId;
 	String message;
 	Boolean auth;
 	
 	
 	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public Response() {
 		super();
 	}

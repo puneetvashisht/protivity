@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -14,46 +14,46 @@ import NameForm from './components/NameForm'
 import UpdateCourse from "./components/UpdateCourse";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import MainHeader from "./components/MainHeader";
+import { AuthContext } from './context/auth';
+
+import './App.css'; 
+import PrivateRoute from './components/PrivateRoute';
 
 export default function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userId, setUserId] = useState('');
+  const loginHandler = (login) => {
+    setIsLoggedIn(login);
+  }
+
+  const handleSetUserId = (userId) => {
+    setUserId(userId);
+  }
+
   return (
+    <AuthContext.Provider value={{isLoggedIn:isLoggedIn, setIsLoggedIn: loginHandler, userId, setUserId: handleSetUserId}}>
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">View Courses</Link>
-            </li>
-            <li>
-              <Link to="/add">Add Courses</Link>
-            </li>
-            <li>
-              <Link to="/nameform">Uncontrolled component</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/register">Register User</Link>
-            </li>
-          </ul>
-        </nav>
+      <div className="container">
+      <div className="row">
+        <MainHeader></MainHeader>
+      </div>
+      <div className="row">
+        <div className="content">
+        
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-        <Route exact path="/">
-            <CourseList />
-          </Route>
+        <PrivateRoute exact path="/"  component={CourseList}>
+          </PrivateRoute>
           <Route path="/nameform">
             <NameForm />
           </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
+          <PrivateRoute path="/users" component={Users}>
+            {/* <Users /> */}
+          </PrivateRoute>
           <Route path="/add">
             <AddCourse />
           </Route>
@@ -71,8 +71,11 @@ export default function App() {
             <NoMatch />
           </Route>
         </Switch>
+          </div>
+        </div>
       </div>
     </Router>
+    </AuthContext.Provider>
   );
 }
 
